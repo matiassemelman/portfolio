@@ -16,6 +16,7 @@ import heroImage from '../images/header-background.webp';
 import comingSoon from '../images/portfolio/comingSoon.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import monicaPhoto from '../images/testimonials/monica.jpg';
 import devifyLogo from '../images/timelineLogos/devifyok_logo.jpg';
 import intiLogo from '../images/timelineLogos/intiLogo.jpg';
 import jelpinLogo from '../images/timelineLogos/jelpinLogo.jpg';
@@ -287,30 +288,27 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Defining proyect idea',
+    description: 'Here goes the description',
+    url: '',
     image: comingSoon,
   },
 ];
 
-/**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
 export const education: TimelineItem[] = [
   {
     date: '2020 - 2021',
     location: 'Go.Elevate',
     title: 'Front End Development, Web Apps Development',
     content: (
-      <>
+      <div className="flex flex-col gap-4">
         <a className="underline text-blue-700" href="https://www.linkedin.com/company/goelevateskills/" target="_blank">
           https://www.linkedin.com/company/goelevateskills/
         </a>
         <p>
           Technologies: Javascript, React, GIT, GitHub, HTML, CSS, Flexbox, Grid, SQL Database, Data Structures, OOP
         </p>
-      </>
+      </div>
     ),
   },
 ];
@@ -354,18 +352,18 @@ export const experience: TimelineItem[] = [
     logoSrc: intiLogo,
     title: 'Programming Tutor',
     content: (
-      <>
+      <div className="flex flex-col gap-4">
         <p>
           Summary: The National Industrial Technology Institute (INTI) is a federal agency responsible for developing
           industrial technology. Plays a crucial role in supporting the growth of Argentinian small and medium-sized
           enterprises.
         </p>
-        <ul>
+        <ul className="list-disc">
           <li>Helped students learn programming basics and Javascript.</li>
           <li>Worked with a government program to provide educational resources to students.</li>
           <li>Fostered a supportive learning environment that encouraged student engagement and participation.</li>
         </ul>
-      </>
+      </div>
     ),
   },
   {
@@ -374,12 +372,12 @@ export const experience: TimelineItem[] = [
     logoSrc: noCountryLogo,
     title: 'Frontend Developer',
     content: (
-      <>
+      <div className="flex flex-col gap-4">
         <p>
           Project: Large-scale hiring platform and one of the fastest growing in the region. No country allows software
           engineers to get more visibility through its network.
         </p>
-        <ul>
+        <ul className="list-disc">
           <li>
             Created dynamic and maintainable web applications and their interfaces using React, Javascript and Tailwind.
           </li>
@@ -396,7 +394,7 @@ export const experience: TimelineItem[] = [
         </ul>
         <p>Tech stack: React 17, React Hooks, Redux, Tailwind</p>
         <p>Additional skills: Git, Scrum, Kanban, Agile</p>
-      </>
+      </div>
     ),
   },
   {
@@ -405,12 +403,12 @@ export const experience: TimelineItem[] = [
     logoSrc: jelpinLogo,
     title: 'Frontend Developer',
     content: (
-      <>
+      <div className="flex flex-col gap-4">
         <p>
           Project: Jelpin is a Gig Economy App and SaaS platform that connects independent contractors with potential
           gigs and work opportunities in Argentina.
         </p>
-        <ul>
+        <ul className="list-disc">
           <li>
             Led the development of 100% of the main Jelpin App platform frontend, using React, JavaScript, and Tailwind.
           </li>
@@ -425,7 +423,7 @@ export const experience: TimelineItem[] = [
         </ul>
         <p>Tech stack: React 17, React Hooks, Redux, Styled Components</p>
         <p>Additional skills: Git, Scrum, Kanban, Agile</p>{' '}
-      </>
+      </div>
     ),
   },
 ];
@@ -437,19 +435,9 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Mónica Sch',
+      text: 'Matías is a committed professional who tackles every challenge head-on. You know you can rely on him, and you are confident he will meet the projects objectives on time and effectively. Perseverant, analytical, and results-oriented, he always gives his all. He is a valuable asset that will greatly contribute to any team, both professionally and personally.',
+      image: monicaPhoto,
     },
   ],
 };
