@@ -32,10 +32,36 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+      try {
+        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            service_id: 'service_0hgptq8',
+            template_id: 'template_4bcalgr',
+            user_id: 'RZ6rXPCTC7UHvtXmE',
+            template_params: {
+              from_name: data.name,
+              to_name: 'Matias',
+              user_email: data.email,
+              message: data.message,
+            },
+          }),
+        });
+        if (response.ok) {
+          // Handle successful response
+          console.log('Email sent successfully');
+          alert('Email sent, please check your inbox');
+        } else {
+          // Handle error response
+          console.error('Failed to send email');
+        }
+      } catch (error) {
+        // Handle network error
+        console.error('Failed to send email:', error);
+      }
     },
     [data],
   );
@@ -45,11 +71,11 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <input className={inputClasses} name="from_name" onChange={onChange} placeholder="Name" required type="text" />
       <input
         autoComplete="email"
         className={inputClasses}
-        name="email"
+        name="user_email"
         onChange={onChange}
         placeholder="Email"
         required
