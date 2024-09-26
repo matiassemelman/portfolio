@@ -8,10 +8,9 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import project1 from '../assets/Captura de pantalla 2024-09-26 171313.png'
-import project2 from '../assets/Captura de pantalla 2024-09-26 172922.png'
-import project3 from '../assets/Captura de pantalla 2024-09-26 173641.png'
-
+import project1 from '../assets/Captura de pantalla 2024-09-26 171313.png';
+import project2 from '../assets/Captura de pantalla 2024-09-26 172922.png';
+import project3 from '../assets/Captura de pantalla 2024-09-26 173641.png';
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
@@ -304,10 +303,10 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'Crypto ico',
-  description: 'Crypto currency website',
-  url: 'https://crypto-ico-one.vercel.app/',
-  image: project3
-}
+    description: 'Crypto currency website',
+    url: 'https://crypto-ico-one.vercel.app/',
+    image: project3,
+  },
 ];
 
 export const education: TimelineItem[] = [
