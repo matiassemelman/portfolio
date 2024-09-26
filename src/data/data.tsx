@@ -8,12 +8,15 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
+import project1 from '../assets/Captura de pantalla 2024-09-26 171313.png'
+import project2 from '../assets/Captura de pantalla 2024-09-26 172922.png'
+import project3 from '../assets/Captura de pantalla 2024-09-26 173641.png'
+
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import comingSoon from '../images/portfolio/comingSoon.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import monicaPhoto from '../images/testimonials/monica.jpg';
@@ -288,11 +291,23 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Defining proyect idea',
-    description: 'Here goes the description',
-    url: '',
-    image: comingSoon,
+    title: 'Roadie',
+    description: 'Beautifully designed travel blog website',
+    url: 'https://roadie-1-matiassemelmans-projects.vercel.app/',
+    image: project1,
   },
+  {
+    title: 'Seat And Eat',
+    description: 'Food delivery website',
+    url: 'https://roadie-1.vercel.app/',
+    image: project2,
+  },
+  {
+    title: 'Crypto ico',
+  description: 'Crypto currency website',
+  url: 'https://crypto-ico-one.vercel.app/',
+  image: project3
+}
 ];
 
 export const education: TimelineItem[] = [
